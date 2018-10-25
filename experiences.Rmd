@@ -5,8 +5,10 @@ title: "Experiences"
 <br> 
 
 ### **Academic**
+<br>
 
 #### Columbia University Mailman School of Public Health -- MPH Epidemiology
+##### 2017 - 2019 
 ##### *New York, NY*
 
 
@@ -15,8 +17,10 @@ title: "Experiences"
 <img src="images/Columbia.png" style="width:20%">
 </center>
 <br>
+<br>
 
 #### The University of Virginia -- BA Biology and Japanese Language & Literature
+##### 2013 - 2017 
 ##### *Charlottesville, VA* 
 
 <br>
@@ -24,8 +28,10 @@ title: "Experiences"
 <img src="images/UVA.png" style="width:13%">
 </center>
 <br>
+<br>
 
 #### Waseda University -- Intensive Japanese Language Program
+##### 2016 
 ##### *Tokyo, Japan*
 
 <br>
@@ -33,20 +39,28 @@ title: "Experiences"
 <img src="images/Waseda.png" style="width:20%">
 </center>
 <br>
+<br>
 
 ### **Professional**
+<br>
 
-#### Columbia University Mailman School of Public Health -- Data Analyst, Lead Teaching Assistant
+#### Columbia University Mailman School of Public Health -- Research Methods & Applications: Quantitative Foundations Lead Teaching Assistant
+##### July 2018 - Present 
+<br>
+
+#### Columbia University Mailman School of Public Health -- Data Analyst 
+##### May 2018 - Aug 2018
 ##### *New York, NY*
-
 
 <br>
 <center>
 <img src="images/Columbia.png" style="width:20%">
 </center>
 <br>
+<br>
 
 #### NASA Langley Research Center -- Research Intern
+##### June - Aug 2013, Jun - Aug 2015
 ##### *Hampton, VA*
 
 <br>
@@ -54,12 +68,15 @@ title: "Experiences"
 <img src="images/NASA.png" style="width:20%">
 </center>
 <br>
+<br>
 
 #### The University of Texas Health Science Center at Houston School of Biomedical Informatics -- Research Intern
+##### June - Aug 2014 
 ##### *Houston, TX*
 
 <br>
 <center>
-<img src="images/UTH.png" style="width:35%">
+<img src="images/UTH.png" style="width:30%">
 </center>
+<br>
 <br>
