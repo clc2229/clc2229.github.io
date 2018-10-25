@@ -9,6 +9,8 @@ navbar:
       href: mailto:<christopher.crowe@columbia.edu>
     - icon: fa-github fa-lg
       href: http://github.com/clc2229/
+    - icon: fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/christopher-crowe-2280a875/ 
 output:
   html_document:
     theme: flatly
