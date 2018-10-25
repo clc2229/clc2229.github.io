@@ -1,0 +1,13 @@
+name: "Personal Website"
+output_dir: "."
+navbar:
+  title: "Home"
+  right:
+    - text: "Experiences"
+      href: experiences.html
+    - icon: fa-envelope fa-lg
+      href: mailto:<christopher.crowe@columbia.edu>
+    - icon: fa-github fa-lg
+      href: http://github.com/clc2229/
+output:
+  html_document
