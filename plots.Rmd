@@ -1,0 +1,50 @@
+---
+title: "Plots"
+---
+
+### NYC Restaurant Inspection Data
+
+```{r}
+devtools::install_github("p8105/p8105.datasets")
+library(p8105.datasets)
+library(tidyverse)
+library(plotly)
+data("rest_inspec")
+
+
+scores_2017 = 
+  rest_inspec %>% 
+  separate(inspection_date, c("inspection_year", "inspection_month", "inspection_day"), sep = "-") %>% 
+  filter(inspection_year == 2017 & score != "NA" & boro != "NA" & boro != "Missing") %>%
+  distinct(camis, score, boro)
+  
+  
+scores_2017 %>% plot_ly(y = ~score, color = ~boro, type = "box", colors = "Set2")
+
+scores_plot = scores_2017 %>% 
+  ggplot(aes(y = score, color = boro)) +
+    geom_boxplot() +
+    labs(
+      x = "Boro of NYC",
+      y = "Inspection Score",
+      title = "Distribution of 2017 NYC Restaurant Inspections Scores by Boro"
+    ) +
+    viridis::scale_color_viridis(
+      name = "Boro",
+      discrete = TRUE
+    ) +
+    theme_bw() +
+    theme(axis.text.x = element_blank(),
+          axis.ticks.x = element_blank()
+    ) 
+
+##rest_inspec %>% 
+  ##filter(boro == "MANHATTAN" & year == 2017 & score != "NA") %>% 
+  ##ggplot(aes(x = zipcode, y = score))
+```
+
+```{r}
+ ## mutate(grade = forcats::fct_relevel(as.factor(grade), c("A", "B", "C", "Z", "P")),
+   ##      cuisine_description = as.factor(cuisine_description)) %>%
+```
+
