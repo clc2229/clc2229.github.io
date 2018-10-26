@@ -1,0 +1,69 @@
+---
+title: "NYC Restaurant Inspections: 2013 - 2017"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+devtools::install_github("p8105/p8105.datasets")
+library(flexdashboard)
+library(p8105.datasets)
+library(tidyverse)
+library(plotly)
+data("rest_inspec")
+```
+
+Column {data-width=600}
+-----------------------------------------------------------------------
+
+### Annual Trends in Monthly Average Inspection Scores
+
+```{r}
+
+monthly_scores = 
+  rest_inspec %>%
+  separate(inspection_date, c("inspection_year", "inspection_month", "inspection_day"), sep = "-") %>%
+  filter(inspection_year >= 2013 & score != "NA") %>% 
+  group_by(inspection_year, inspection_month) %>% 
+  summarize(monthly_avg_score = mean(score, na.rm = TRUE))
+
+monthly_scores %>% plot_ly(y = ~monthly_avg_score, x = ~inspection_month, color = ~inspection_year, type = "scatter", mode = "line")
+
+```
+
+Column {data-width=400}
+-----------------------------------------------------------------------
+
+### Annual Grade Compositions
+
+```{r}
+grades_2013_2017 = 
+  rest_inspec %>% 
+  separate(grade_date, c("grade_year", "grade_month", "grade_day"), sep = "-") %>% 
+  filter(grade_year >= 2013  & grade != "NA" & grade != "Not Yet Graded") %>% 
+  group_by(grade_year, grade) %>% 
+  summarize(number_grade = n()) %>% 
+  group_by(grade_year) %>% 
+  mutate(total_per_year = sum(number_grade),
+         proportion_grade = number_grade / total_per_year
+         ) 
+
+grades_2013_2017 %>% plot_ly(y = ~proportion_grade, x = ~grade_year, color = ~grade, type = "bar")
+```
+
+### Annual Distributions of Inspection Scores 
+
+```{r}
+scores_2017 = 
+  rest_inspec %>% 
+  separate(inspection_date, c("inspection_year", "inspection_month", "inspection_day"), sep = "-") %>% 
+  filter(boro == "MANHATTAN" & inspection_year >= 2013 & score != "NA" & boro != "NA" & boro != "Missing") %>%
+  distinct(camis, score, inspection_year)
+  
+  
+scores_2017 %>% plot_ly(y = ~score, color = ~inspection_year, type = "box", colors = "Set2")
+  
+```
+

@@ -5,6 +5,8 @@ navbar:
   right:
     - text: "Experiences"
       href: experiences.html
+    - text: "Current Projects"
+      href: dashboard.html
     - icon: fa-envelope fa-lg
       href: mailto:<christopher.crowe@columbia.edu>
     - icon: fa-github fa-lg
