@@ -23,7 +23,7 @@ scores_2017 %>% plot_ly(y = ~score, color = ~inspection_year, type = "box", colo
 grades_2013_2017 = 
   rest_inspec %>% 
   separate(grade_date, c("grade_year", "grade_month", "grade_day"), sep = "-") %>% 
-  filter(grade_year >= 2013 & boro != "NA" & boro != "Missing" & grade != "NA" & grade != "Not Yet Graded") %>% 
+  filter(grade_year >= 2013  & grade != "NA" & grade != "Not Yet Graded") %>% 
   group_by(grade_year, grade) %>% 
   summarize(number_grade = n()) %>% 
   group_by(grade_year) %>% 
@@ -31,14 +31,20 @@ grades_2013_2017 =
          proportion_grade = number_grade / total_per_year
          ) 
 
-grades_2013_2017 %>% plot_ly(y = ~proportion_grade, x = ~grade, color = ~grade_year, type = "scatter", mode = "lines")
+grades_2013_2017 %>% plot_ly(y = ~proportion_grade, x = ~grade_year, color = ~grade, type = "bar")
+
+
+monthly_scores = 
+  rest_inspec %>%
+  separate(inspection_date, c("inspection_year", "inspection_month", "inspection_day"), sep = "-") %>%
+  filter(inspection_year >= 2013 & score != "NA") %>% 
+  group_by(inspection_year, inspection_month) %>% 
+  summarize(monthly_avg_score = mean(score, na.rm = TRUE))
+
+monthly_scores %>% plot_ly(y = ~monthly_avg_score, x = ~inspection_month, color = ~inspection_year, type = "scatter", mode = "line")
   
 
-
-
-##rest_inspec %>% 
-  ##filter(boro == "MANHATTAN" & year == 2017 & score != "NA") %>% 
-  ##ggplot(aes(x = zipcode, y = score))
+  
 ```
 
 ```{r}
