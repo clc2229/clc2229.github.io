@@ -1,4 +1,14 @@
 ---
 title: "Undergraduate Thesis"
-output: html_document
 ---
+
+<br>
+
+
+### <a href="documents/undergrad_thesis.pdf" tabindex="-1"><strong>The Road to Recovery:  A Translation and Analysis of Excerpts from Wada Keijūrō’s *Ikai-no-Tettsui, The Iron Hammer of the Medical World* </strong></a>
+
+<br>
+
+<center>
+
+<image src = "images/UVA.png" style = "width:25%">
