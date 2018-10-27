@@ -5,6 +5,10 @@ navbar:
   left:
     - text: "Experiences"
       href: experiences.html
+    - text: "Past Projects"
+      menu:
+        - text: "Undergraduate Thesis"
+          href: undergrad_thesis.html
     - text: "Current Projects"
       menu: 
         - text: "NYC Restaurant Inspections"
