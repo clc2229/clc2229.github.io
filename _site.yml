@@ -8,7 +8,7 @@ navbar:
     - text: "Past Projects"
       menu:
         - text: "Undergraduate Research"
-          href: undergraduate_thesis.html
+          href: undergraduate_research.html
     - text: "Current Projects"
       menu: 
         - text: "NYC Restaurant Inspections"
