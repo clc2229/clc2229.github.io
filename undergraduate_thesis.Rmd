@@ -1,14 +1,18 @@
 ---
-title: "Undergraduate Thesis"
+title: "Undergraduate Research"
 ---
 
 <br>
 
 
-### <a href="documents/undergrad_thesis.pdf" tabindex="-1"><strong>The Road to Recovery:  A Translation and Analysis of Excerpts from Wada Keijūrō’s *Ikai-no-Tettsui, The Iron Hammer of the Medical World* </strong></a>
+### <a href="documents/undergrad_thesis.pdf" tabindex="-1">The Road to Recovery:  A Translation and Analysis of Excerpts from Wada Keijūrō’s *Ikai-no-Tettsui, The Iron Hammer of the Medical World* (2017). </a>
+
+<br>
+
+### [Designing Ontology-based Patterns for the Representation of the Time-Relevant Eligibility Criteria of Clinical Protocols (2015).](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4525239/) 
 
 <br>
 
 <center>
 
-<image src = "images/UVA.png" style = "width:25%">
+<image src = "images/UVA.png" style = "width:10%">
