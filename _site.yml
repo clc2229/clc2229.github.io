@@ -7,7 +7,7 @@ navbar:
       href: experiences.html
     - text: "Past Projects"
       menu:
-        - text: "Undergraduate Thesis"
+        - text: "Undergraduate Research"
           href: undergraduate_thesis.html
     - text: "Current Projects"
       menu: 
